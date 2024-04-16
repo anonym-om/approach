@@ -1,0 +1,12 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX txrfp: <http://taxref.mnhn.fr/lod/property/> 
+PREFIX txrfrk: <http://taxref.mnhn.fr/lod/taxrank/> 
+PREFIX dc: <http://rs.tdwg.org/dwc/terms/>
+
+select distinct ?s ?o where {
+?s txrfp:vernacularName ?o.
+filter(lang(?o)="en")
+
+}
+
