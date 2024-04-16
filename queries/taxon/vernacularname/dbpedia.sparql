@@ -1,9 +1,0 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dbo: <http://dbpedia.org/ontology/>
-
-select distinct ?s ?o where {
-?s a dbo:Species.
-?s rdfs:label ?o.
-filter(lang(?o)="en")
-}
-
